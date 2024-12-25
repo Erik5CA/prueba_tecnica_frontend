@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { User } from "../types";
 import { userService } from "../services/userService";
-import { LoaderCircle } from "lucide-react";
+import { LoaderCircle, UserRoundPen, UserRoundPlus } from "lucide-react";
 import "./UserForm.css";
 
 const UserForm = ({
@@ -140,7 +140,14 @@ const UserForm = ({
           {isLoading ? (
             <LoaderCircle className="loader" width={18} height={18} />
           ) : (
-            labelButton
+            <>
+              <p>{labelButton}</p>
+              {isCreate ? (
+                <UserRoundPlus width={18} height={18} />
+              ) : (
+                <UserRoundPen width={18} height={18} />
+              )}
+            </>
           )}
         </button>
       </form>
