@@ -13,15 +13,3 @@ export interface UserWithId {
   email: string;
   image: string | null;
 }
-
-export interface UserResponse {
-  data: User[];
-}
-
-export interface UserResponseError {
-  message: string;
-}
-
-export interface UserResponseSuccess {
-  data: User;
-}
