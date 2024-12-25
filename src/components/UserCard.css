@@ -1,6 +1,7 @@
 .user {
   display: flex;
   width: 100%;
+  max-width: 400px;
   align-items: center;
   justify-content: center;
   gap: 1rem;
@@ -40,19 +41,22 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-edit {
-  background-color: #1bac7bd3;
-  border: none;
+  background-color: #1bac7c25;
+  color: #1bac7bd3;
+  border: 1px solid #1bac7bd3;
   padding: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
 }
 
 .btn-delete {
-  background-color: #df2323e5;
-  border: none;
+  background-color: #df232327;
+  color: #df2323e5;
+  border: 1px solid #df2323e5;
   padding: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
