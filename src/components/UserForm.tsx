@@ -71,27 +71,27 @@ const UserForm = ({
         <div className="form__inputs">
           <div className="form__input-group">
             <label className="form__label" htmlFor="name">
-              Name
+              Name(s)
             </label>
             <input
               className="form__input"
               type="text"
               name="name"
               value={user.name}
-              placeholder="Name"
+              placeholder="e.g. John"
               onChange={handleChange}
             />
           </div>
           <div className="form__input-group">
             <label className="form__label" htmlFor="lastname">
-              Last name
+              Last Name(s)
             </label>
             <input
               className="form__input"
               type="text"
               name="lastname"
               value={user.lastname}
-              placeholder="Last name"
+              placeholder="e.g. Doe"
               onChange={handleChange}
             />
           </div>
@@ -104,7 +104,7 @@ const UserForm = ({
               type="text"
               name="email"
               value={user.email}
-              placeholder="Email"
+              placeholder="e.g. john@doe.com"
               onChange={handleChange}
             />
           </div>
@@ -131,7 +131,7 @@ const UserForm = ({
               type="password"
               name="password"
               value={user.password}
-              placeholder="Password"
+              placeholder="e.g. 123456"
               onChange={handleChange}
             />
           </div>
