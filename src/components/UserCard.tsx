@@ -13,8 +13,9 @@ const UserCard = ({
   onDelete: (id: number) => Promise<void>;
 }) => {
   const [isLoading, setIsLoading] = useState(false);
+  console.log(user);
   const urlImage = user.image
-    ? `${API_URL}/static/` + user.image.split("/").pop()
+    ? `${API_URL}/static/` + user.image
     : `https://avatar.iran.liara.run/username?username=${user.name}`;
 
   const handleDelete = async (id: number) => {
