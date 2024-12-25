@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { UserWithId } from "../types";
-import { Edit2Icon, LoaderCircle, TrashIcon } from "lucide-react";
+import { LoaderCircle, UserRoundPen, UserRoundX } from "lucide-react";
 import { useState } from "react";
 import { API_URL } from "../constants";
 import "./UserCard.css";
@@ -43,7 +43,7 @@ const UserCard = ({
           <Link to={`/edit/${user.id}`}>
             <button className="btn-edit">
               <p>Edit</p>
-              <Edit2Icon width={18} height={18} />
+              <UserRoundPen width={18} height={18} />
             </button>
           </Link>
           <button
@@ -56,7 +56,7 @@ const UserCard = ({
             ) : (
               <>
                 <p>Delete</p>
-                <TrashIcon width={18} height={18} />
+                <UserRoundX width={18} height={18} />
               </>
             )}
           </button>
