@@ -35,10 +35,10 @@ const UserForm = ({
     setIsLoading(true);
     const formData = new FormData();
     formData.append("image", user.image || "");
-    formData.append("password", user.password);
-    formData.append("name", user.name);
-    formData.append("lastname", user.lastname);
-    formData.append("email", user.email);
+    formData.append("password", user.password.trim());
+    formData.append("name", user.name.trim());
+    formData.append("lastname", user.lastname.trim());
+    formData.append("email", user.email.trim());
     try {
       if (isCreate) {
         await userService.createUser(formData);
