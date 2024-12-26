@@ -13,7 +13,6 @@ const UserCard = ({
   onDelete: (id: number) => Promise<void>;
 }) => {
   const [isLoading, setIsLoading] = useState(false);
-  console.log(user);
   const urlImage = user.image
     ? `${API_URL}/static/` + user.image
     : `https://avatar.iran.liara.run/username?username=${user.name}`;
@@ -38,6 +37,10 @@ const UserCard = ({
         <p>
           {" "}
           <strong>Email:</strong> {user.email}
+        </p>
+        <p className="user__password">
+          {" "}
+          <strong>Password:</strong> {user.password}
         </p>
         <div className="user__actions">
           <Link to={`/edit/${user.id}`}>

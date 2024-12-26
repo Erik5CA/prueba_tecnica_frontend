@@ -12,4 +12,5 @@ export interface UserWithId {
   lastname: string;
   email: string;
   image: string | null;
+  password: string;
 }
